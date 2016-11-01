@@ -1,5 +1,5 @@
 """
-WSGI config for asyncwebo2 project.
+WSGI config for asyncbot2 project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -12,7 +12,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 from whitenoise.django import DjangoWhiteNoise
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "asyncwebo2.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "asyncbot2.settings")
 
 application = get_wsgi_application()
 application = DjangoWhiteNoise(application)

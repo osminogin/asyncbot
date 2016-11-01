@@ -3,11 +3,11 @@ import os
 from celery import Celery
 
 # set the default Django settings module for the 'celery' program.
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'asyncwebo2.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'asyncbot2.settings')
 
 from django.conf import settings  # noqa
 
-app = Celery('asyncwebo2')
+app = Celery('asyncbot2')
 
 # Using a string here means the worker will not have to
 # pickle the object when using Windows.
