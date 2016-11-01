@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+
+    'delayed',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +143,13 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+
+# Broker
+
+BROKER_URL = os.environ.get('REDIS_URL', 'amqp://localhost')
+CELERYD_CONCURRENCY = 1
+CELERY_RESULT_BACKEND = os.environ.get('REDIS_URL', 'amqp://localhost')
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Europe/Moscow'
