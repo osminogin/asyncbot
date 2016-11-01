@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
 
+    'bot',
     'delayed',
 ]
 
@@ -153,3 +154,7 @@ CELERY_RESULT_BACKEND = os.environ.get('REDIS_URL', 'amqp://localhost')
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Europe/Moscow'
+
+# Telegram Token
+
+TELEGRAM_TOKEN = '275663538:AAErhVnGkQq9WgHCFb3S_OSP06gyTPy59Fg'
