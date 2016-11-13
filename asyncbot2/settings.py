@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'asyncwebo2.urls'
+ROOT_URLCONF = 'asyncbot2.urls'
 
 TEMPLATES = [
     {
@@ -73,14 +73,15 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'asyncwebo2.wsgi.application'
+WSGI_APPLICATION = 'asyncbot2.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://postgres@localhost:5432/postgres')
+    'default': dj_database_url.config(default='postgres://postgres@localhost:5432/postgres',
+                                      conn_max_age=600)
 }
 
 
