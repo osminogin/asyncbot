@@ -26,7 +26,7 @@ SECRET_KEY = '^^CHANGE^^ME'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['damp-anchorage-64746.herokuapp.com']
+ALLOWED_HOSTS = ['asyncbot.herokuapp.com']
 
 
 # Application definition
