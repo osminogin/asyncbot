@@ -1,5 +1,7 @@
 .idea/
-*/settings_local.py
+db.sqlite3
+test.sqlite3
+asyncbot2/settings_local.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
