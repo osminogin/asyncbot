@@ -1,2 +1,2 @@
-web: gunicorn asyncbot2.wsgi --log-file -
-worker: celery -A asyncbot2 worker -l info
+web: gunicorn asyncbot.wsgi --log-file -
+worker: celery -A asyncbot worker -l info
