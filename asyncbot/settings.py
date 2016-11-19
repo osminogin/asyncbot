@@ -149,8 +149,7 @@ REST_FRAMEWORK = {
 
 # Broker
 
-BROKER_URL = os.environ.get('REDIS_URL', 'amqp://localhost')
-CELERYD_CONCURRENCY = 1
+CELERY_BROKER_URL = os.environ.get('REDIS_URL', 'amqp://localhost')
 CELERY_RESULT_BACKEND = os.environ.get('REDIS_URL', 'amqp://localhost')
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
